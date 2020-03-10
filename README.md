@@ -27,7 +27,7 @@ Feel free to play around with the rule sets, and think about why these rules may
 
 es-lint is an npm package that allows for configuring a set of rules that your team can use to assist with programming in ECMAscript. Through this use of this tool, your team can align on best practices, and choose whether to ignore, warn, or error if these practices are not followed. Examples included in this module are listed below, but you can check out the full rule set [here](https://eslint.org/docs/rules/).
 
-```json
+```js
 {
     "rules": {
         "no-var": 2, // error if var is used (use let or const instead)
@@ -42,7 +42,7 @@ es-lint is an npm package that allows for configuring a set of rules that your t
 
 Prettier is an npm package that allows for configuring a set of formatting rules for your team, so that everyone's code looks similar (reducing changes solely due to formatting). This module uses the options outlined below, but you can check out a full set of rules [here]().
 
-```json
+```js
 {
     "tabWidth": 4, // force tabWidth to 4 spaces
     "semi": false, // remove unnecessary semi-colons
@@ -54,7 +54,7 @@ Prettier is an npm package that allows for configuring a set of formatting rules
 
 In order to enforce these rules, we use the vs-code integration (or a different IDE if your team uses it). And specify the worksapces settings inside `.vscode/settings.json`
 
-```json
+```js
 {
     "editor.defaultFormatter": "esbenp.prettier-vscode", // tell the editor which formatter to use
     "editor.formatOnSave": true // auto-format on file save
