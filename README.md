@@ -1,3 +1,68 @@
+# Linting and Formatting Module
+
+Inside this module you will find a few things you may not have encountered before
+
+`eslintrc.js` - a file for configuring the npm package/vs-code integration `eslint`
+`.prettierrc` - a file for configuring the npm pacakge/vs-code integration `prettier`
+
+## Installation
+
+First, you will need to clone the repository and install the npm dependencies:
+
+`git clone git@github.com:willbenmitch/linting.git`
+
+`cd linting && npm install`
+
+Once the project is cloned and the npm packages are installed, you will need ot install the vs-code extensions for es-lint and prettier.
+
+[es-lint vs-code installation](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) - note that you have already installed the `es-lint` dependencies through npm above, and you just want to follow the instructions to install the vs-code extension.
+
+[prettier vs-code installation](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - note that you have already installed the `prettier` dependencies through npm above, and you just want to follow the instructions to install the vs-code extension.
+
+Once the integrations are installed, you should restart vs-code, and open up `src/app.js`. You should notice a few lines that have been highlighted with either red (error) or yellow (warning). Hover over these lines to see what the issues are, and if you can correct them.
+
+Feel free to play around with the rule sets, and think about why these rules may or may not be important. Keep in mind that some rules are purely stylistic, and it can be beneficial to limit rules to the ones that drive the most value for you (or your team).
+
+## [Eslint](https://eslint.org/)
+
+es-lint is an npm package that allows for configuring a set of rules that your team can use to assist with programming in ECMAscript. Through this use of this tool, your team can align on best practices, and choose whether to ignore, warn, or error if these practices are not followed. Examples included in this module are listed below, but you can check out the full rule set [here](https://eslint.org/docs/rules/).
+
+```json
+{
+    "rules": {
+        "no-var": 2, // error if var is used (use let or const instead)
+        "strict": 2, //  use-strict enabled
+        "camelcase": 1, // warn if objects are not named using camelcase
+        "prefer-const": 1 // warn if let is used where const would work (ie. if you use let, but do not reassign)
+    }
+}
+```
+
+## [Prettier](https://prettier.io/)
+
+Prettier is an npm package that allows for configuring a set of formatting rules for your team, so that everyone's code looks similar (reducing changes solely due to formatting). This module uses the options outlined below, but you can check out a full set of rules [here]().
+
+```json
+{
+    "tabWidth": 4, // force tabWidth to 4 spaces
+    "semi": false, // remove unnecessary semi-colons
+    "printWidth": 160, // specify a max line width (160 chars)
+    "trailingComma": "all", // place a trailing comma on lines that will support it
+    "singleQuote": true // use single quotes instead of double quotes
+}
+```
+
+In order to enforce these rules, we use the vs-code integration (or a different IDE if your team uses it). And specify the worksapces settings inside `.vscode/settings.json`
+
+```json
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode", // tell the editor which formatter to use
+    "editor.formatOnSave": true // auto-format on file save
+}
+```
+
+# Inherited Boilerplate
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
