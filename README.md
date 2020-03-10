@@ -42,7 +42,7 @@ es-lint is an npm package that allows for configuring a set of rules that your t
 
 ## [Prettier](https://prettier.io/)
 
-Prettier is an npm package that allows for configuring a set of formatting rules for your team, so that everyone's code looks similar (reducing changes solely due to formatting). This module uses the options outlined below, but you can check out a full set of rules [here]().
+Prettier is an npm package that allows for configuring a set of formatting rules for your team, so that everyone's code looks similar (reducing changes solely due to formatting). This module uses the options outlined below, but you can check out a full set of rules [here](https://prettier.io/docs/en/options.html).
 
 ```js
 {
