@@ -1,9 +1,8 @@
 # Linting and Formatting Module
 
-Inside this module you will find a few things you may not have encountered before
-
-`eslintrc.js` - a file for configuring the npm package/vs-code integration `eslint`
-`.prettierrc` - a file for configuring the npm pacakge/vs-code integration `prettier`
+This module was setup with the following in mind:
+1. To be a boilerplate project for `es-lint` and `prettier` in a react application
+1. As publically available coaching material for Brainstation Winter Cohort 2020
 
 ## Installation
 
@@ -38,6 +37,9 @@ es-lint is an npm package that allows for configuring a set of rules that your t
 }
 ```
 
+**Note:`eslintrc.js` is a file for configuring the rules of `eslint` in this project**
+
+
 ## [Prettier](https://prettier.io/)
 
 Prettier is an npm package that allows for configuring a set of formatting rules for your team, so that everyone's code looks similar (reducing changes solely due to formatting). This module uses the options outlined below, but you can check out a full set of rules [here]().
@@ -60,6 +62,8 @@ In order to enforce these rules, we use the vs-code integration (or a different 
     "editor.formatOnSave": true // auto-format on file save
 }
 ```
+
+**Note: `.prettierrc` is a file for configuring the rules for `prettier` in this project**
 
 # Inherited Boilerplate
 
